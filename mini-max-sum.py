@@ -1,14 +1,7 @@
 def mini_max_sum(arr):
-    sorted_array = sorted(arr)
-    left_arr = list(sorted_array)
-    right_arr = list(sorted_array)
-    del left_arr[-1]
-    del right_arr[0]
-    left_sum, right_sum = 0, 0
-    for num in left_arr:
-        left_sum += num
-    for num in right_arr:
-        right_sum += num
+    arr.sort()
+    left_sum = sum(arr[:4])
+    right_sum = sum(arr[1:])
     print(left_sum, right_sum)
 
 
