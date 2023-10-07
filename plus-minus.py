@@ -1,15 +1,18 @@
 def plus_minus(arr):
-    a, b, c = 0, 0, 0
-    for i in arr:
-        if i > 0:
-            a = a + 1
-        elif i < 0:
-            b = b + 1
+    total_elements = len(arr)
+    positive_count = 0
+    negative_count = 0
+    zero_count = 0
+    for num in arr:
+        if num > 0:
+            positive_count += 1
+        elif num < 0:
+            negative_count += 1
         else:
-            c = c + 1
-    print(a / len(arr))
-    print(b / len(arr))
-    print(c / len(arr))
+            zero_count += 1
+    print(positive_count / total_elements)
+    print(negative_count / total_elements)
+    print(zero_count / total_elements)
 
 
-plus_minus([1, 1, 0, -1, -1])
+plus_minus([-4, 3, -9, 0, 4, 1])
